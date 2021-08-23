@@ -1,0 +1,44 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .social-links {
+        display: flex;
+        margin-bottom: 2.5rem;
+
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 1.75rem;
+            height: 1.75rem;
+
+            border: solid 1px #FFF;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+            i {
+                color: #FFF;
+                transition: 0.2s;
+            }
+
+            &:hover {
+                border: 1px solid $soft-magenta;
+                i {
+                    color: $soft-magenta;
+                }
+            }
+            
+        }
+
+        .social-icon:nth-child(2) {
+            margin: 0 0.75rem;
+        }
+    }
+}
