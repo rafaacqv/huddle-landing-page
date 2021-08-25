@@ -7,11 +7,18 @@
     
     img {
         width: 98%;
+        max-width: 520px;
+        margin: 0 auto;
         margin-bottom: 3.75rem;
+
+        animation: fadeIn 1s, moveInBottom 1s;
     }
 
     .text-container {
         margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h1 {
 
@@ -23,17 +30,22 @@
             color: hsla(0, 0%, 100%, 1);
     
             margin-bottom: 1rem;
+
+            width: 284px;
         }
 
         p {
         
             font-family: $body-font-family;
-            font-size: 1rem;
+            font-size: 0.90rem;
             line-height: 1.5rem;
             font-weight: normal;
             font-style: normal;
     
             color: hsla(0, 0%, 100%, 1);
+
+            padding: 0 0.5rem;
+            width: 100%;
         }
     }
 
@@ -42,7 +54,7 @@
 
         button {
 
-            width: 70%;
+            flex-shrink: 5;
     
             text-align: center;
             background-color: #FFFFFF;
@@ -67,6 +79,47 @@
         button:hover {
             background-color: $soft-magenta;
             color: #FFFFFF;
+        }
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    .hero {
+        .text-container {
+            margin-bottom: 2.5rem;
+
+            h1 {
+                font-size: 1.75rem;
+                width: 350px;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .hero {
+        .text-container {
+            h1 {
+                font-size: 2rem;
+                width: 400px;
+            }
+
+            p {
+                padding: 0;
+                max-width: 459px;
+            }
+        }
+
+        .button-container {
+            button {
+                flex-shrink: 2;
+                font-size: 0.90rem;
+            }
         }
     }
 }
